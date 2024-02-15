@@ -1,0 +1,27 @@
+.nc_button_open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 40px;
+  font-size: var(--nc-font-size-4);
+  background-color: var(--nc-color-elements-3);
+  color: var(--nc-color-elements-7);
+  padding: 0 16px;
+  border: none;
+  border-radius: 10px;
+  margin: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nc_button_open:hover {
+  background-color: var(--nc-color-elements-4);
+}
+
+@media (max-width: 640px) {
+  .nc_button_open {
+    width: 100px;
+    margin: 20px;
+  }
+}

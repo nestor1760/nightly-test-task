@@ -1,0 +1,32 @@
+.nc_footerWrapper {
+  position: absolute;
+  top: -15px;
+  width: 100%;
+  height: 75px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px 0px 16px 16px;
+  background-color: var(--nc-color-elements-3);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 31px 16px 16px 16px;
+}
+
+.nc_footerText {
+  font-size: var(--nc-font-size-3);
+  color: var(--nc-color-elements-6);
+}
+
+.nc_footerText a{
+  color: var(--nc-color-primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .nc_footerWrapper {
+    padding: 16px;
+    border-radius: 0px;
+    top: -20px;
+  }
+}

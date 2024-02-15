@@ -1,0 +1,191 @@
+.nc_desktopListWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  height: 464px;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--nc-color-elements-3);
+}
+
+.nc_desktopListWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: linear-gradient(180deg, transparent 0%, var(--nc-color-elements-1) 100%);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.nc_desktopListWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.nc_desktopListTopBar {
+  padding: 12px 12px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--nc-font-size-4);
+  color: var(--nc-color-elements-6);
+}
+
+.nc_desktopListTopBarChain {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  color: var(--nc-color-primary)
+}
+
+.nc_desktopListTopBarChainIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+}
+
+.nc_desktopListSearchBar {
+  position: relative;
+}
+
+.nc_desktopListSearchBar::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(180deg, var(--nc-color-elements-3) 12.37%, transparent 100%);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.nc_desktopListInputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 12px;
+  padding: 8px;
+  width: 264px;
+  height: 32px;
+  background-color: var(--nc-color-elements-1);
+  border-radius: 8px;
+}
+
+.nc_desktopListInnerInput {
+  background-color: var(--nc-color-elements-1);
+  color: var(--nc-color-elements-6);
+  font-size: var(--nc-font-size-3);
+  width: 100%;
+  border: 0;
+  opacity: 0.7;
+  margin-bottom: -2px;
+}
+
+.nc_desktopListInnerInput:focus {
+  outline: none;
+}
+
+.nc_desktopListInputIcon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -2px;
+  background-image: var(--nc-img-search);
+}
+
+.nc_desktopListEmptyListWrapper {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nc_desktopListEmptyListImage {
+  width: 104px;
+  height: 216px;
+}
+
+.nc_desktopListEmptyListHeading {
+  padding-top: 16px;
+  color: var(--nc-color-elements-7);
+  font-weight: 700;
+  font-size: var(--nc-font-size-4);
+}
+
+.nc_desktopListEmptyListDesc {
+  padding-top: 4px;
+  width: 171px;
+  color: var(--nc-color-elements-6);
+  text-align: center;
+  font-size: var(--nc-font-size-2);
+}
+
+.nc_desktopListWalletsListWrapper {
+  max-height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin-top: 4px;
+  padding-top: 4px;
+  padding-bottom: 16px;
+}
+
+.nc_desktopListWalletsListWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.nc_desktopListRecentGrid {
+  background-color: var(--nc-color-elements-4);
+  width: 272px;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4px;
+  column-gap: 8px;
+}
+
+.nc_desktopListNotDetectedGrid {
+  width: 272px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4px;
+  column-gap: 8px;
+  padding-inline: 8px;
+}
+
+@media (max-width: 1080px) {
+  .nc_desktopListInputWrapper {
+    width: 184px;
+  }
+
+  .nc_desktopListNotDetectedGrid,
+  .nc_desktopListRecentGrid {
+    width: 184px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1080px) {
+  .nc_desktopListWrapper {
+    width: 204px;
+  }
+}
+
+@media (max-width: 960px) {
+  .nc_desktopListWrapper {
+    height: 368px;
+  }
+}
